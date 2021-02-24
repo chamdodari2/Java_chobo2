@@ -8,7 +8,7 @@ import javax.swing.JFileChooser;
 public class FileEx {
 
 	public static void main(String[] args) throws IOException {
-//		File f = new File ("C:\\workspace_java\\native_jdbc_programing\\src\\native_jdbc_programing\\dto\\Department.java");
+//		File f = new File ("C:\\workspace_java\\native_jdbc_programing\\src\\native_jdbc_programing\\dto\\Department.java"); 이거 대신에
 		File f = getSearchFile();
 		
 		String fileName = f.getName();
@@ -44,7 +44,7 @@ public class FileEx {
 		
 		
 		int res = jfc.showOpenDialog(null);
-		File file = null;
+		File file = null;  //초기화해주기
 		//재대로 선택되었다면
 		if(res== JFileChooser.APPROVE_OPTION) {
 			file = jfc.getSelectedFile();

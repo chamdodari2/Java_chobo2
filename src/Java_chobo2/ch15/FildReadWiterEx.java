@@ -13,10 +13,10 @@ public class FildReadWiterEx {
 //		fileReadWriterEx();
 //버퍼도 써보자/ 동시에 두개하기 따로 안하고
 		
-		try(FileReader fr = new FileReader("oupt2.properties");
-				BufferedReader br = new BufferedReader(fr,8192);  //input이면 input read면 
+		try(FileReader fr = new FileReader("oupt2.properties");// 이 파일을 읽어서
+				BufferedReader br = new BufferedReader(fr,8192);  //input이면 input read면 read를 써야한다
 				
-				FileWriter fw = new FileWriter("test.properties");
+				FileWriter fw = new FileWriter("test.properties");  //이 이름으로 복제한다
 				BufferedWriter bw = new BufferedWriter(fw,8192))
 		 		
 				{
@@ -31,8 +31,8 @@ public class FildReadWiterEx {
 	}
 
 	public static void fileReadWriterEx() {
-		try (FileReader fr = new FileReader("oupt.xml"); 
-				FileWriter fw = new FileWriter("test.xml")) {
+		try (FileReader fr = new FileReader("oupt.xml");   //이 파일에서 읽어서
+				FileWriter fw = new FileWriter("test.xml")) {  //이 이름으로 복제한다
 			
 			char[] cbuf =  new char[512];  //단위로 (512개씩)  읽어들이는것. 앞에 했던건 1개씩 읽었기때문에 이게 더 빠르다
 			while((	fr.read(cbuf)) !=-1) { //읽어들여서 그 값이 -1이 아니면 읽어들인 내용응 아래에 담는다
