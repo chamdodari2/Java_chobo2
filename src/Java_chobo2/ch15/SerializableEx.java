@@ -21,8 +21,9 @@ public class SerializableEx {
 			list.add(u1);
 			list.add(u2);
 
-			oos.writeObject(u1);
-			oos.writeObject(u2);
+			/*
+			 * oos.writeObject(u1); oos.writeObject(u2);   주석처리해도된다. 따로따로해줄필욯없다
+			 */
 			oos.writeObject(list);
 			System.out.println("Done.");
 
