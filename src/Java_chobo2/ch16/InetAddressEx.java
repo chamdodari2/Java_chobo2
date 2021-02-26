@@ -11,45 +11,45 @@ public class InetAddressEx {
 		InetAddress[] ipArr = null;
 		try {
 			ip = InetAddress.getByName("www.naver.com");
-			System.out.println("getHostName() : " +ip.getHostName());
-			System.out.println("getHostAddress() : " +ip.getHostAddress());
-			System.out.println("getHostName() : " +ip.getHostName());
-			System.out.println("toString : " +ip.toString());
-			
+			System.out.println("getHostName() : " + ip.getHostName());
+			System.out.println("getHostAddress() : " + ip.getHostAddress());
+			System.out.println("getHostName() : " + ip.getHostName());
+			System.out.println("toString : " + ip.toString());
+
 			byte[] ipAddr = ip.getAddress();
-			System.out.println("getaddress() :" + Arrays.toString(ipAddr)) ;
-			
+			System.out.println("getaddress() :" + Arrays.toString(ipAddr));
+
 			String result = "";
-			for(int i = 0; i < ipAddr.length; i++){
-				result += (ipAddr[i] < 0 ? ipAddr[i] + 256 : ipAddr[i]) + ".";			
-			System.out.println("getaddress() + 256 : " + result);			
-			System.out.println();
+			for (int i = 0; i < ipAddr.length; i++) {
+				result += (ipAddr[i] < 0 ? ipAddr[i] + 256 : ipAddr[i]) + ".";
+				System.out.println("getaddress() + 256 : " + result);
+				System.out.println();
 			}
-			}catch (UnknownHostException e) {
-				e.printStackTrace();
-			}
-	
-			
+		} catch (UnknownHostException e) {
+			e.printStackTrace();
+		}
+
 		try {
 			ip = InetAddress.getLocalHost();
-		} catch (Exception e) {
+		} catch (UnknownHostException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println("getHostName() : " +ip.getHostName());
-		System.out.println("getHostAddress() : " +ip.getHostAddress());
-		System.out.println();			
-		}catch (UnknownHostException e) {
-			e.printStackTrace();
-	}try {
-		ipArr = InetAddress.getAllByName("www.naver.com");
-		
-		for(int i = 0; i < ipArr.length; i++){
-			System.out.println("ipArr["+i+"[:"+ipArr[i]);	
-		}
-		}catch (UnknownHostException e) {
-			e.printStackTrace();
+		System.out.println("getHostName() : " + ip.getHostName());
+		System.out.println("getHostAddress() : " + ip.getHostAddress());
+		System.out.println();
+//		}catch (UnknownHostException e) {
+//			e.printStackTrace();
+		try {
+			ipArr = InetAddress.getAllByName("www.naver.com");
+
+			for (int i = 0; i < ipArr.length; i++) {
+				System.out.println("ipArr[" + i + "[:" + ipArr[i]);
+			}
+		} catch (UnknownHostException e) {
+//			e.printStackTrace();
+//		}
+
 		}
 	}
-		
-		}
+}
