@@ -48,7 +48,7 @@ public class LamdaEx01 {
 		System.out.println("max = " + c);
 		
 		LambdaInter lbi0 = new LambdaInter() { //클래스를 따로 선언하지 않고도 이렇게 정의가능 익명으로
-			
+		
 			@Override
 			public int max(int a, int b) {			
 				return a > b ? a: b;
