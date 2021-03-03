@@ -25,16 +25,19 @@ public class BiFunctionEx {
 		////////////////////////////////////// 람다식으로 바꾸어보시오. 삼항연산자는 안된다
 
 //		String str ="abc".length() ==3 ? "같음" : "다름"; 
-		BiConsumer<String, Integer> bic2 = (t, u) -> {
+		BiConsumer<String, Integer> bic01 = (t, u) -> {
 			if (t.length() == u) {
 				System.out.println("같음");
 			} else {
 				System.out.println("다름");
+			
 			}
+			};
+		
 			// String str = "abc".length() ==3 ? "같음" :"다름";
-			bic2.accept("abc", 2);
-			bic2.accept("abc", 3);
-
+			bic01.accept("abc", 2);
+			bic01.accept("abc", 3);
+///////////////////////////////////////////////////
 			BiPredicate<String, String> bip = new BiPredicate<String, String>() {
 				@Override
 				public boolean test(String t, String u) {
@@ -43,10 +46,10 @@ public class BiFunctionEx {
 			};
 			System.out.println(bip.test("abc", "ab"));
 			System.out.println(bip.test("abc", "abc"));
-
-			BiPredicate<String, String> bip2 = (t, u) -> t.equals(u);
-			System.out.println(bip2.test("abc", "ab"));
-			System.out.println(bip2.test("abc", "abc"));
+//////////////////////////////////////////////////////////
+			BiPredicate<String, String> bip01 = (t, u) -> t.equals(u);
+			System.out.println(bip01.test("abc", "ab"));
+			System.out.println(bip01.test("abc", "abc"));
 
 			BiFunction<Integer, Integer, String> bif = new BiFunction<Integer, Integer, String>() {
 				@Override
@@ -58,12 +61,16 @@ public class BiFunctionEx {
 					}
 				}
 
-			};
+			};// 람다식으로 해보시오
 			System.out.println(bif.apply(5, 7));
 			System.out.println(bif.apply(7, 7));
-		}; // 람다식으로 해보시오
-		BiFunction<Integer, Integer, String> bif01 = (a, b) -> a == b ? "true" : "false";
-		System.out.println(bif01.apply(5, 7));
-		System.out.println(bif01.apply(7, 7));
-	}
+
+			BiFunction<Integer, Integer, String> bif01 = (a, b) -> a == b ? "true" : "false";
+			System.out.println(bif01.apply(5, 7));
+			System.out.println(bif01.apply(7, 7));
+		} 
+		
+		
+		
 }
+
