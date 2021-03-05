@@ -8,12 +8,10 @@ import java.util.stream.Stream;
 public class MidStreamEx {
 
 	public static void main(String[] args) {
-//		extracted01();  // 중간연산 skip,limit,filter,distinct
-		
-//		extracted02();
-		
-		extracted03(); //sorted
-		
+//		extracted01();  // 중간연산 skip,limit,filter,distinct		
+//		extracted02();		
+//		extracted03(); //sorted
+	//	
 				 
 		
 		
