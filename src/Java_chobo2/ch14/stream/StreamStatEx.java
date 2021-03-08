@@ -50,11 +50,10 @@ public class StreamStatEx {
 		//람다3
 		int[] arr = {1,2,3,4,5,6,7,8,9,10};
 		IntStream intStream = IntStream.of(arr);
-		int sum = intStream.sum();
-		
-		OptionalDouble avg = intStream.average();  //여기가 문젠가본디
-		OptionalInt  max = intStream.max();
-		OptionalInt  min = intStream.min();
+		int sum = intStream.sum();		
+		OptionalDouble avg = IntStream.of(arr).average();  //여기가 문젠가본디  이유 :: 앞에서 사용했기때문에 새로 생성하거나 IntStream.of(arr)붙여줘야쓸수있다.
+		OptionalInt  max = IntStream.of(arr).max();
+		OptionalInt  min = IntStream.of(arr).min();
 		
 		System.out.printf("sum = %d, avg = %.2f, max = %d, min = %d%n", 
 							sum,avg.getAsDouble(),max.getAsInt(),min.getAsInt());  //옵셔널 더블이어서 그냥avg쓰면안되고 겟해야함 min도 마찬가지
