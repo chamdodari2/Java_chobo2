@@ -51,6 +51,7 @@ public class StreamForEachToArrayEx {
 		System.out.println(Arrays.toString(objArr));
 		
 		
+		
 	}
 
 }
