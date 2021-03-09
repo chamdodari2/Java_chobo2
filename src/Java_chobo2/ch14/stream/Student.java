@@ -1,4 +1,4 @@
-package Java_chobo2.ch14.stream;
+package Java_chobo2.ch14.stream;  //논리적사고력 필요! 코드를 그대로 가져다쓰면안된당. 이해하고써야함!
 
 public class Student implements Comparable<Student> {
 
